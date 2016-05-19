@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+
+<!-- Albatros C.III-->
+
+    <path>albatros_d.i.ac</path>
+
+    <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Albatros-DI/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
+    </load>
+
+    <unload>
+      livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
+    </unload>
+  </nasal>
+
+ <effect>
+     <inherits-from>Effects/model-transparent</inherits-from>
+      <object-name>propdisc</object-name>
+      <object-name>perspex</object-name> 
+    </effect>
+
+   <animation>
+    <type>material</type>
+    <object-name>leftwheel</object-name>
+    <object-name>rightwheel</object-name>
+    <object-name>spinner</object-name>
+    <object-name>fuselage</object-name>
+    <object-name>radiator</object-name>
+    <object-name>WheelStruts</object-name>
+    <object-name>radiator</object-name>
+    <object-name>VStab</object-name>
+    <object-name>LVStab</object-name>
+    <object-name>Rudder</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>fuse-texture</texture-prop>
+    <texture>albd2_F.png</texture>
+ </animation>
+
+ <animation>
+    <type>material</type>   
+    <object-name>LAileron</object-name>
+    <object-name>RAileron</object-name>
+    <object-name>LLWing</object-name>
+    <object-name>LRWing</object-name>
+    <object-name>ULWing</object-name>
+    <object-name>URWing</object-name>
+    <object-name>HStab</object-name>
+    <object-name>Elevator</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>wing-texture</texture-prop>
+    <texture>albd2_W.png</texture>
+  </animation>
+ 
+
+      <!-- 3D-vol shadow -->
+  <!-- <model>
+    <path>Aircraft/Albatros-DI/Models/albdi-shadow.xml</path>
+    <offsets>
+      <x-m>  0.0 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.00 </z-m>
+    </offsets>
+  </model> -->
+
+<!-- gun effects -->
+
+  <model>
+    <path>Aircraft/Albatros-DIII/Models/Effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -0.7836 </x-m>
+      <y-m> -0.139 </y-m>
+      <z-m>  0.610 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> 180 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Albatros-DIII/Models/Effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -0.7836 </x-m>
+      <y-m>  0.139 </y-m>
+      <z-m>  0.610 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> 180 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+    <!-- Pilot -->
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m>  1.022 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  -0.032 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Cranking effects -->
+
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Effects/cranking/cranking.xml</path>
+    <offsets>
+      <x-m> -0.623 </x-m>
+      <y-m> 0.58 </y-m>
+      <z-m> 0.43 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+  
+
+<!-- Ground dust -->
+
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -0.3 </x-m>
+      <y-m> -0.83 </y-m>
+      <z-m> -1.57 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m> -0.3 </x-m>
+      <y-m> 0.86 </y-m>
+      <z-m> -1.57 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+ <model>
+    <path>Aircraft/Albatros-DI/Models/Effects/ground/ground2.xml</path>
+    <offsets>
+      <x-m> 5.062 </x-m>
+      <y-m> 0.0 </y-m>
+      <z-m> -0.682 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+ 
+<!-- engine running smoke -->
+
+   <model>
+    <path>Aircraft/Albatros-DI/Models/Effects/exhaust/exhaustsmoke.xml</path>
+    <offsets>
+      <x-m> -0.623 </x-m>
+      <y-m> 0.58 </y-m>
+      <z-m> 0.43 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+<model>
+    <path>Aircraft/Albatros-DI/Models/Panel/instruments/panel.xml</path>
+        <offsets>
+      <x-m> 0.00 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.000 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>  0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+ <animation>
+  <type>spin</type>
+  <object-name>propeller</object-name>
+  <object-name>propdisc</object-name>
+  <object-name>spinner</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 20 </value>
+      </greater-than>
+    </condition>
+  <property>engines/engine[0]/rpm</property>
+  <factor>-1.0</factor>
+  <center>
+   <x-m> -1.872</x-m>
+   <y-m>  0.000</y-m>
+   <z-m>  0.000</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propdisc</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine/rpm</property>
+        <value>305</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propeller</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine/rpm</property>
+	<value>329</value>
+      </less-than>
+    </condition>
+  </animation>
+
+ <!-- flight control surfaces anim -->
+
+ <animation>
+     <type>rotate</type>
+     <object-name>Rudder</object-name>
+     <property>surface-positions/rudder-pos-norm</property>
+     <factor>24.0</factor>
+     <center>
+         <x-m>4.718</x-m>
+         <y-m>0.000</y-m>
+         <z-m>0.351</z-m>
+     </center>
+     <axis>
+         <x>0</x>
+         <y>0</y>
+         <z>1</z>
+     </axis>
+ </animation>
+
+
+ <animation>
+     <type>rotate</type>
+     <object-name>Elevator</object-name>
+     <property>surface-positions/elevator-pos-norm</property>
+     <interpolation>
+         <entry>
+             <ind>-1.0</ind>
+             <dep>-18</dep>
+         </entry>
+         <entry>
+             <ind>0</ind>
+             <dep>0</dep>
+         </entry>
+         <entry>
+             <ind>1.0</ind>
+             <dep>18</dep>
+         </entry>
+     </interpolation>
+     <center>
+         <x-m>5.076</x-m>
+         <y-m>0.0</y-m>
+         <z-m>0.001</z-m>
+     </center>
+     <axis>
+         <x>0.0</x>
+         <y>1.0</y>
+         <z>0.0</z>
+     </axis>
+ </animation>
+
+
+ <animation>
+     <type>rotate</type>
+     <object-name>LAileron</object-name>
+     <property>surface-positions/left-aileron-pos-norm</property>
+     <interpolation>
+         <entry>
+             <ind>-1.0</ind>
+             <dep>-16</dep>
+         </entry>
+         <entry>
+             <ind>0.0</ind>
+             <dep>0</dep>
+         </entry>
+         <entry>
+             <ind>1.0</ind>
+             <dep>16</dep>
+         </entry>
+     </interpolation>
+     <center>
+         <x-m>0.473</x-m>
+         <y-m>-3.18</y-m>
+         <z-m>1.076</z-m>
+     </center>
+     <axis>
+         <x>0.0</x>
+         <y>1.0</y>
+         <z>0.0</z>
+     </axis>
+ </animation>
+
+
+ <animation>
+     <type>rotate</type>
+     <object-name>RAileron</object-name>
+     <property>surface-positions/right-aileron-pos-norm</property>
+     <interpolation>
+         <entry>
+             <ind>-1.0</ind>
+             <dep>-16</dep>
+         </entry>
+         <entry>
+             <ind>0.0</ind>
+             <dep>0</dep>
+         </entry>
+         <entry>
+             <ind>1.0</ind>
+             <dep>16</dep>
+         </entry>
+     </interpolation>
+      <center>
+         <x-m>0.473</x-m>
+         <y-m>3.18</y-m>
+         <z-m>1.076</z-m>
+     </center>
+     <axis>
+         <x>0.0</x>
+         <y>1.0</y>
+         <z>0.0</z>
+     </axis>
+ </animation>
+
+
+   <!-- Gear Compression -->
+  <animation>
+    <name>Maingear</name>
+    <object-name>leftwheel</object-name>
+    <object-name>rightwheel</object-name>
+    <object-name>axle</object-name>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Maingear</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.5 </ind><dep>  -2.15 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>   -3.94 </dep></entry>
+    </interpolation>
+    <center>
+        <x-m>-0.486</x-m>
+        <y-m> 0.742</y-m>
+        <z-m>-1.21</z-m>
+    </center>
+    <axis>
+      <x> 1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+
+  <animation>
+    <type>rotate</type>
+    <object-name>Maingear</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <interpolation>
+      <entry><ind> 0.0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 0.5 </ind><dep>  -2.15 </dep></entry>
+      <entry><ind> 1.0 </ind><dep>   -3.94 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m>-0.486</x-m>
+        <y-m>-0.742</y-m>
+        <z-m>-1.21</z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y> 0 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+
+<!-- Wheel animations -->
+
+ <animation>
+  <type>spin</type>
+  <object-name>rightwheel</object-name>
+  <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 23 </factor>
+  <center>
+   <x-m>-0.486</x-m>
+   <y-m> 0.85</y-m>
+   <z-m>-1.2152</z-m>
+  </center>
+  <axis>
+   <x> 0.0</x>
+   <y>-1.0</y>
+   <z> 0.0</z>
+  </axis>
+  </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>leftwheel</object-name>
+  <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 23 </factor>
+  <center>
+   <x-m>-0.486</x-m>
+   <y-m>-0.85</y-m>
+   <z-m>-1.2152</z-m>
+  </center>
+  <axis>
+   <x> 0.0</x>
+   <y>-1.0</y>
+   <z> 0.0</z>
+  </axis>
+  </animation>
+
+<!-- cockpit -->
+
+  <!-- control elevators -->
+
+	<animation>
+		<object-name>joystick</object-name>
+		<property>controls/flight/elevator</property>
+		<type>rotate</type>
+		<factor>13</factor>
+            <center>
+		 <x-m>0.552</x-m>
+		 <y-m>0</y-m>
+		 <z-m>-0.4161</z-m>
+		</center>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+ 	<!-- control ailerons -->
+	<animation>
+		<object-name>joystick</object-name>
+		<property>controls/flight/aileron</property>
+		<type>rotate</type>
+		<factor>14</factor>
+            <center>
+		 <x-m>0.552</x-m>
+		 <y-m>0</y-m>
+		 <z-m>-0.4161</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+ <!-- rudderbar -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>rudderbar</object-name>
+  <property>controls/flight/rudder</property>
+  <factor>20</factor>
+  <center>
+   <x-m> 0.3297</x-m>
+   <y-m>0.0</y-m>
+   <z-m>-0.3371</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+
+ <!-- throttle -->
+
+ <animation>
+  <type>rotate</type>
+  <object-name>throttle</object-name>
+  <property>controls/engines/engine[0]/throttle</property>
+  <factor>60</factor>
+  <center>
+   <x-m> 0.6868</x-m>
+   <y-m>-0.324</y-m>
+   <z-m> 0.3041</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+<!-- Fuel Gauge -->
+
+  <animation> 
+    <type>rotate</type>
+    <object-name>fuelgauge-needle</object-name>
+    <property>consumables/fuel/tank[0]/level-gal_us</property>
+    <interpolation>
+      <entry><ind>    0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 21.3 </ind><dep> -345 </dep></entry>
+    </interpolation>
+    <center>
+   <x-m> 0.556  </x-m>
+   <y-m> 0.3405 </y-m>
+   <z-m> 0.2485 </z-m>
+  </center>
+    <axis> 
+      <x>  -0.179 </x>
+      <y>  1.0 </y>
+      <z>   0.1047 </z>
+    </axis>
+  </animation>
+
+
+</PropertyList>

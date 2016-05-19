@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>panel</object-name>
+
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- ALTIMETER -->
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Panel/instruments/alt/alt.xml</path>
+    <offsets>
+      <x-m>  0.429 </x-m>
+      <y-m>  0.294 </y-m>
+      <z-m>  0.330 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- TURN -->
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Panel/instruments/turn/turn.xml</path>
+    <offsets>
+      <x-m> 0.463 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.382 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- FUEL SELECTOR -->
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Panel/instruments/fuelselector/fuelselector.xml</path>
+    <offsets>
+      <x-m> 0.419 </x-m>
+      <y-m> 0.263 </y-m>
+      <z-m> 0.178 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- PUMP SELECTOR -->
+  <!-- <model>
+    <path>Aircraft/Albatros-DI/Models/Panel/instruments/pump/pump.xml</path>
+    <offsets>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.370 </y-m>
+      <z-m> 0.040 </z-m>
+    </offsets>
+  </model> -->
+  
+  <!-- DIVERS -->
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Panel/instruments/divers/divers.xml</path>
+    <offsets>
+      <x-m> 0.419 </x-m>
+      <y-m> 0.270 </y-m>
+      <z-m> 0.122 </z-m>
+    </offsets>
+  </model>
+
+     <!-- RPM -->
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Panel/instruments/RPM/tach.xml</path>
+    <offsets>
+      <x-m>   0.493 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.543 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Wing Compass -->
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Panel/instruments/compass/wingcompass.xml</path>
+    <offsets>
+      <x-m>  -0.4643 </x-m>
+      <y-m>  0.181 </y-m>
+      <z-m>  -0.34 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+  
+    <!-- Compass -->
+  <!-- <model>
+    <path>Aircraft/Albatros-DI/Models/Panel/instruments/compass/compass.xml</path>
+    <offsets>
+      <x-m>  0.415 </x-m>
+      <y-m>  -0.283 </y-m>
+      <z-m>   0.16505 </z-m>
+      <roll-deg>    0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model> -->
+
+  <!-- ASI -->
+  <model>
+    <path>Aircraft/Albatros-DI/Models/Panel/instruments/ASI/asi.xml</path>
+    <offsets>
+      <x-m>  0.405 </x-m>
+      <y-m>  -0.26 </y-m>
+      <z-m>  0.326 </z-m>
+      <roll-deg>      0.000 </roll-deg>
+      <pitch-deg>   0.000 </pitch-deg>
+      <heading-deg> 0.000 </heading-deg>
+    </offsets>
+  </model>
+  
+</PropertyList>
