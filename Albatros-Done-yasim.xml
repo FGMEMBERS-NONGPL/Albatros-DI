@@ -43,13 +43,13 @@ Performance
         chord="1.62" 
         length="4.293" 
         taper="1"
-        incidence="1.0"
+        incidence="1.2"
         twist="0.25"
         dihedral="0"
         sweep="0" 
         camber="0.093">
         <stall aoa="11" width="4.0" peak="2.25"/>
-        <flap1 start="0.525" end="1" lift="1.44" drag="1.361"/>
+        <flap1 start="0.625" end="1" lift="1.30" drag="1.361"/>
       
         <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
         <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
@@ -63,12 +63,12 @@ Performance
         chord="1.63" 
         length="3.83" 
         taper="1" 
-        incidence="1.0"
+        incidence="1.2"
         twist="0.25"
         dihedral="0"
         sweep="0"
         camber="0.093">
-        <stall aoa="11" width="4.0" peak="2.25"/>
+        <stall aoa="11" width="4.0" peak="1.75"/>
   </mstab>
 
     <hstab x="-4.537" y="0.003" z="0.0012" 
@@ -191,8 +191,9 @@ Performance
   </gear>
 
 
-  <!-- Fuel: 220 lbs -->
-  <tank x="0.28" y="0" z="-0.59" capacity="220"/>
+    <!-- Fuel  -->  
+<!-- Guess on fuel tank position -->
+  <tank x="0.28" y="0" z="-0.59" capacity="220"
 
   <!-- pilot weight -->
   <weight x="-0.687" y="0.0" z="0.096" mass-prop="/sim/weight[0]/weight-lb"/>

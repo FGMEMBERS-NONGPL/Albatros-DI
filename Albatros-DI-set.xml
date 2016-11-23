@@ -54,13 +54,6 @@
       <min-lb>150</min-lb>
   </weight> 
 
-  <weight n="1">
-      <name>Observer</name>
-      <weight-lb>180</weight-lb>
-      <max-lb>230</max-lb>
-      <min-lb>0</min-lb>
-  </weight>
-
  </sim>
  
    <input>

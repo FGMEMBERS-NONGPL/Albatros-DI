@@ -82,7 +82,7 @@
 <!-- gun effects -->
 
   <model>
-    <path>Aircraft/Albatros-DIII/Models/Effects/guns/fire.xml</path>
+    <path>Aircraft/Albatros-DI/Models/Effects/guns/fire.xml</path>
     <offsets>
       <x-m> -0.7836 </x-m>
       <y-m> -0.139 </y-m>
@@ -94,7 +94,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Albatros-DIII/Models/Effects/guns/fire.xml</path>
+    <path>Aircraft/Albatros-DI/Models/Effects/guns/fire.xml</path>
     <offsets>
       <x-m> -0.7836 </x-m>
       <y-m>  0.139 </y-m>
